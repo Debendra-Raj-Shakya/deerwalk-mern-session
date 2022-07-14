@@ -1,58 +1,64 @@
-// // let mul =7;
+let arr = [1, 2, 3, 4, 5];
+// let value=5
 
-// // for (let i=1;i<10;i++){
-// //     // console.lo
-// //     result=i * mul
-// //     console.log(`${i} *  ${mul} = ${result}`)
-// // }
-// // // let j=0
-// // while(j<10){
-// //     result=j * mul
-// //     console.log(`${j} *  ${mul} = ${result}`)
-// //     j++;
-// // }
-// // let k = 1;
-// // do {
-// //     console.log('first')
-// //   result = k * mul;
-// //   console.log(`${k} *  ${mul} = ${result}`);
-// //   k++;
-// // } while (k <= 10);
+// arr.indexOf(value)==-1 ? arr.push(value):console.log('exists')
+// console.log(arr)
 
-// const a=(id=1)=>{
-//     for (let i=1;i<=10;i++){
-//         // console.lo
-//         result=i * id
-//         console.log(`${i} *  ${id} = ${result}`)
-//     }
+// const a =(value)=>{
+//   arr.indexOf(value)==-1 ? arr.push(value):console.log('exists')
+//   console.log(arr)
 // }
+
 // a(10)
 
-// const nameaaaa=(names='deben')=>console.log(`good morinign ${names}`)
-// nameaaaa('abiskar')
+// const months=['jan','march','april', 'june','july'];
+
+// months.splice(5,0,'dec')
+// console.log(months)
+
+// months.splice (1,1,'March')
+// console.log(months)
+
+// months.splice(3,1)
+// console.log(months)
+
+// let arra = [25, 36, 49, 64, 81];
+// arra.map((element) => {
+//   let a = Math.sqrt(element);
+//   console.log(a);
+// });
+
+// let arrb = [2, 3, 4, 6, 8];
+// const fcn = arrb
+//   .map((element) => {
+//     return element * 2;
+//   })
+//   .filter((element) => {
+//     return element > 10;
+//   });
+// console.log(fcn);
+
+// let arr2=[2,3,4,5]
+// let aa=
+// arr.reduce((prev,element)=>{
+//   console.log(prev,"prev")
+//   console.log(element,"element/current")
+//   return prev+element
+// },5)
+// console.log(aa)
 
 
-const letters=['a','b','c','d']
-
-letters.push('e')
-letters.push('f')
-
-console.log(letters)
-
-// for(i=0; i<letters.length;i++){
-//     console.log(letters[i])
+// let counter=10
+// const greet =()=>{
+//   console.log(new Date().toLocaleTimeString())
+//   counter--
+//   if(counter==0){
+//     clearInterval(intervalID)
+//   }
 // }
 
-// for (letter in letters){
-//     console.log(letters[letter])
-// }
-// for(letter of letters){
-//     console.log(letter)
-// }
+// const intervalID=setInterval(greet,1000)
 
-letters.forEach( (element,index,array)=>{
-    console.log(element)
-    console.log(index)
-    console.log(array)
-})
-
+const greet=()=>console.log('good morning')
+const intervalID=setTimeout(greet,5000)
+// clearTimeout((intervalID))
