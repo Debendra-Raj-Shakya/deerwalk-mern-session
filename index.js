@@ -57,8 +57,27 @@ let arr = [1, 2, 3, 4, 5];
 //   }
 // }
 
-// const intervalID=setInterval(greet,1000)
+// // const intervalID=setInterval(greet,1000)
 
-const greet=()=>console.log('good morning')
-const intervalID=setTimeout(greet,5000)
-// clearTimeout((intervalID))
+// const greet=()=>console.log('good morning')
+// const intervalID=setTimeout(greet,5000)
+// // clearTimeout((intervalID))
+
+const times=()=>{
+
+    
+    let time=new Date().toLocaleTimeString()
+    document.getElementById('time').innerHTML=time
+}
+setInterval(times,1000)
+
+
+
+// let string='bowobs'
+// const reverseString = string.split('').reverse().join('');
+// if(string===reverseString){
+//     console.log(`it is a palindrome`)
+// }else{
+//     console.log('ite is not a palindrome')
+// }
+// console.log(reverseString)
