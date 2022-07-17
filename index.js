@@ -1,83 +1,52 @@
-let arr = [1, 2, 3, 4, 5];
-// let value=5
+let object={
+    persondetils:{
+        "first_name":"debendra",
+        "last_name":"shakya",
+        "age":3,
+        "location":"kathmandud"
 
-// arr.indexOf(value)==-1 ? arr.push(value):console.log('exists')
-// console.log(arr)
-
-// const a =(value)=>{
-//   arr.indexOf(value)==-1 ? arr.push(value):console.log('exists')
-//   console.log(arr)
-// }
-
-// a(10)
-
-// const months=['jan','march','april', 'june','july'];
-
-// months.splice(5,0,'dec')
-// console.log(months)
-
-// months.splice (1,1,'March')
-// console.log(months)
-
-// months.splice(3,1)
-// console.log(months)
-
-// let arra = [25, 36, 49, 64, 81];
-// arra.map((element) => {
-//   let a = Math.sqrt(element);
-//   console.log(a);
-// });
-
-// let arrb = [2, 3, 4, 6, 8];
-// const fcn = arrb
-//   .map((element) => {
-//     return element * 2;
-//   })
-//   .filter((element) => {
-//     return element > 10;
-//   });
-// console.log(fcn);
-
-// let arr2=[2,3,4,5]
-// let aa=
-// arr.reduce((prev,element)=>{
-//   console.log(prev,"prev")
-//   console.log(element,"element/current")
-//   return prev+element
-// },5)
-// console.log(aa)
+    },
+    personProfile:{
+        'work':"front end",
+        'mapp':"google",
+        "hello":function a(){
+            // console.log(this.work)
+            console.log("hello"+ object.persondetils.first_name)
+            return 'hello'
+        }
+    }
 
 
-// let counter=10
-// const greet =()=>{
-//   console.log(new Date().toLocaleTimeString())
-//   counter--
-//   if(counter==0){
-//     clearInterval(intervalID)
-//   }
-// }
 
-// // const intervalID=setInterval(greet,1000)
-
-// const greet=()=>console.log('good morning')
-// const intervalID=setTimeout(greet,5000)
-// // clearTimeout((intervalID))
-
-const times=()=>{
-
-    
-    let time=new Date().toLocaleTimeString()
-    document.getElementById('time').innerHTML=time
 }
-setInterval(times,1000)
+// console.log(object.personProfile.hello())
+// console.log(object.personProfile.sa)
 
 
+// console.log(globalThis)
 
-// let string='bowobs'
-// const reverseString = string.split('').reverse().join('');
-// if(string===reverseString){
-//     console.log(`it is a palindrome`)
-// }else{
-//     console.log('ite is not a palindrome')
+// function Person(first_name,last_name,hello){
+//     // const obj={}
+//     this.name=first_name
+//     this.last_name=last_name
+//     this.hello=hello;
+    
 // }
-// console.log(reverseString)
+
+// const person1=new Person(object.persondetils.first_name,object.persondetils.last_name,object.personProfile.hello)
+// person1.hello()
+
+
+// fetch('http://ws.audioscrobbler.com/2.0/?method=geo.gettoptracks&country=nepal&api_key=b34b1d3084048c33ec1d45bcafbd8c1d&format=json').then((res)=>res.json()).then((data)=>console.log(data))
+
+
+function a (){
+    let clo=4;
+    console.log(clo +2)
+}
+function b(){
+    console.log(clo +1)
+}
+
+a()
+b()
