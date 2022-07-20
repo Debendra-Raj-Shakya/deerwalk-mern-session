@@ -1,52 +1,17 @@
-let count=5;
-const Times=()=>{
-    let time= new Date().toLocaleTimeString()
-    document.getElementById('time').innerHTML=time
+const fs =require('fs');
 
-    console.log(count)
-    console.log(time)
-    count--
-    if(count===0){
-        clearInterval(inter)
-        document.getElementById('time').innerHTML=`Time has been stopped at ${time}`
-    }
+// fs.writeFileSync('./hello.js','debendra ')
+// fs.appendFileSync('./hello.js','shakya')
 
-}
-const inter=setInterval(Times,1000)
+//  let data=fs.readFileSync('./hello.js','utf-8')
+//  console.log(data)
 
+fs.mkdirSync("node-app")
+fs.writeFileSync('./node-app/details.txt',"some text")
+fs.appendFileSync('./node-app/details.txt','data added')
+let data=fs.readFileSync('./node-app/details.txt','utf-8')
+console.log(data)
+fs.renameSync("./node-app/details.txt","./node-app/mydetails.txt")
 
-
-//next day
-// let arr=[10,20,30]
-
-// let a=arr[0]
-// let b=arr[1]
-// let c=arr[2]
-// console.log(a)
-
-
-// let a={
-//     movies:{
-//         "name":"kgf",
-//         "price":1200,
-//         "content":"flim",
-//     },
-//     movies1:{
-//         "name":"kgf2",
-//         "price":12000,
-//         "content":"flim",
-//     }
-   
-// }
-// const {movies}=a
-// const {name,price}=movies
-// // console.log(name)
-
-// const arr=({name,price,...every})=>{
-//     console.log(name)
-//     console.log(price)
-//     console.log(every)
-//     const {content}=every
-//     console.log(content)
-// }
-// arr(movies)
+// fs.unlinkSync('./node-app/mydetails.txt')
+// fs.rmdirSync('./node-app')
