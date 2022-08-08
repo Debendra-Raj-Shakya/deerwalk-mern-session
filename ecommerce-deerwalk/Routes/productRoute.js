@@ -25,7 +25,7 @@ if(req.query.category ){
 
 }
 
-  res.json(queryfilter);
+  res.json(productData);
 
 
 });
