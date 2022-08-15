@@ -3,7 +3,12 @@ const cors = require("cors");
 const productData= require('./data/productData.json')
 const express = require("express");
 const server = express(); //cannot create more than once
+const mongoose=require('mongoose')
+const connectDb=require('./database/connection')
+// const db= "mongodb+srv://admin:Password1@devconnector.rcxhefg.mongodb.net/deerwalkMern?retryWrites=true&w=majority"
 
+// mongoose.connect(db,()=>console.log('database connected'))
+connectDb();
 //seup server
 server.use(cors());
 server.use(express.static(__dirname + "/public"))
