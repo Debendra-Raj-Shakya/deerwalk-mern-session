@@ -3,7 +3,7 @@ const productData = require("../data/productData.json");
 const express = require("express");
 const { query } = require("express");
 const router = express.Router();
-const productcontroller=require('../controllers/product.controller')
+const productcontroller=require('../controllers/productcontroller')
 router.get("/",productcontroller);
 
 // router.get("/:id", (req, res) => {

@@ -1,8 +1,16 @@
-const productcontroller = (req, res) => {
+const productModel=require("../models/Product")
+
+
+const productcontroller = async (req, res) => {
+  console.log('Hi')
+  try{
+  const productData = await productModel.find()
+
+  console.log(productData)
   if (req.query.category && req.query.price) {
     let queryfilter = productData.filter(
       (product) =>
-        product.category == req.query.category &&
+     product.category == req.query.category &&
         req.query.price == product.price
     );
     res.json(queryfilter);
@@ -25,6 +33,9 @@ const productcontroller = (req, res) => {
   }
 
   res.json(productData);
+} catch(err) {
+  res.send(err)
+}
 };
 
 module.exports = productcontroller;
