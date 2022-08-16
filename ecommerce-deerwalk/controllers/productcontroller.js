@@ -1,3 +1,4 @@
+const ProductModel = require("../models/Product");
 const productModel=require("../models/Product")
 
 
@@ -38,4 +39,30 @@ const productcontroller = async (req, res) => {
 }
 };
 
-module.exports = productcontroller;
+
+
+
+const returnSingleProduct=async(req,res,next)=>{
+  const {productID}=req.params;
+
+  const productData=await ProductModel.find({_id:productID})
+  res.json(productData)
+}
+
+
+const createProduct =async(req,res,next)=>{
+
+}
+
+
+const updateProduct=async(req,res)=>{
+
+}
+
+const deleteProduct=async(req,res)=>{
+
+}
+const patchedProduct=async(req,res)=>{
+
+}
+module.exports = {productcontroller,returnSingleProduct,patchedProduct,deleteProduct,updateProduct,createProduct};

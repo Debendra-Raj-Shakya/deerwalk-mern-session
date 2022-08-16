@@ -16,6 +16,7 @@ server.use(express.static(__dirname + "/public"))
 //setup server side rendering
 server.set("view engine", "hbs");
 server.get('/',(req,res)=>res.render("index",{productData}))
+server.get('/:productID',ProductRouter)
 
 // server.get('/css/index.css',(req,res)=>{
 //     res.sendFile(__dirname + '/public/css/index.css')
