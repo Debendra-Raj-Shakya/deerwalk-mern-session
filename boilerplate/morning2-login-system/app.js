@@ -3,8 +3,7 @@ const mongoose = require('mongoose');
 const authRoutes = require('./routes/auth')
 const cookieParser = require('cookie-parser');
 const app = express();
-const { requireAuth } = require('./middleware/authMiddleware');
-
+const { requireAuth ,checkUser} = require('./middleware/authMiddleware');
 
 // middleware
 app.use(express.static('public'));
@@ -23,8 +22,10 @@ mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true, useCr
   .catch((err) => console.log(err));
 
 // routes
+
+app.use(checkUser)
 app.get('/', (req, res) => res.render('home'));
 
 // app.get('/burgers', requireAuth, (req, res) => res.render('burgers'));
-app.get('/burgers', (req, res) => res.render('burgers'));
+app.get('/burgers',requireAuth, (req, res) => res.render('burgers'));
 app.use(authRoutes)
