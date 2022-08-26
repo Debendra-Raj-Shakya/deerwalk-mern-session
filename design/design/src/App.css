@@ -1,0 +1,66 @@
+.navbar {
+  background: transparent;
+  margin-bottom: -80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  position: absolute;
+  top: 0;
+  z-index: 50;
+  width: 100%;
+
+  transition: background-color 0.3s ease-in;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #04aa6d;
+  color: white;
+}
+
+.navright {
+  list-style: none;
+  width: 60%;
+  float: right;
+}
+
+img {
+  height: 100vh;
+  width: 200vh;
+}
+.imgbg {
+  height: 100vh;
+  width: 200vh;
+  position: relative;
+}
+.imgbg h1 {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+}
+
+.todo {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+}
