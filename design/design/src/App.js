@@ -3,6 +3,17 @@ import "./App.css";
 import Todo from "./components/Todo";
 
 function App() {
+
+const [a,setA]=React.useState(false)
+
+useEffect(() => {
+  setA(true)
+  return () => {
+    cleanup
+  };
+}, [submitData]);
+
+
   return (
     <>
       <div className="topnav">
@@ -23,7 +34,7 @@ function App() {
         <img src="./a.png" alt=""/>
         <h1>hello world</h1>
         <div className="todo">
-        <Todo/>
+        <Todo submitData={submitData}/>
 
         </div>
       </div>

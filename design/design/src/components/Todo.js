@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Todo = () => {
+const Todo = (submitData) => {
   return (
     <div>
       <form>
         <input type='text' placeholder="enter text" />
-        <button type='submit'>send</button>
+        <button type='submit' onSubmit={()=>submitData()}>send</button>
       </form>
     </div>
   )
